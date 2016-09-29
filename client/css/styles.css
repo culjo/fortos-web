@@ -1,0 +1,278 @@
+/* Css Sheet */
+@font-face {
+    font-family: 'opslight';
+    src: url('../fonts/opsl/OpenSans-Light.eot');
+    src: url('../fonts/opsl/OpenSans-Light.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/opsl/OpenSans-Light.woff') format('woff'),
+    url('../fonts/opsl/OpenSans-Light.ttf') format('truetype'),
+    url('../fonts/opsl/OpenSans-Light.svg#opslight') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/*  CLEARFIX
+    :CATEGORY: hack
+    :EXPLAIN: solves floating height problems for parent elements
+--------------------------------------------------------------------*/
+.cf:before, .cf:after {
+    content: " ";
+    display: table; }
+
+.cf:after {
+    clear: both; }
+
+/* ------------------------------------------------ */
+*{
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+body{
+    background-color: #F3F5F6;
+}
+
+ul{
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.button {
+    display: inline-block;
+    margin: 0 10px 0 0;
+    padding: 13px 56px;
+    font-size: 16px;
+    line-height: 1.8;
+    appearance: none;
+    box-shadow: none;
+    border-radius: 0;
+}
+
+.button:focus {
+    outline: none
+}
+
+.button-flat{
+    color: #fff;
+    background-color: #6496c8;
+    text-shadow: -1px 1px #417cb8;
+    border: none;
+}
+
+.button-flat:hover{
+    background-color: #346392;
+    text-shadow: -1px 1px #27496d;
+}
+
+.button-flat:active{
+    background-color: #27496d;
+    text-shadow: -1px 1px #193047;
+}
+
+.button-file{
+}
+
+.alert{
+    color: #4c6a8b;
+}
+.text-center{
+    text-align: center;
+}
+
+#wrapper{
+    width: 95%;
+    height: auto;
+    margin: 0 auto;
+    /*border: 1px solid #c0c0c0;*/
+}
+
+.site-name{
+    font-family: opslight, sans-serif;
+    text-align: center;
+    color: #6f85a0;
+}
+.site-tagline{
+    text-align: center;
+    color: #aaaaaa;
+    font-size: 0.9em;
+}
+/* ------------------------------------------- */
+
+#upload-section{
+    width: 95%;
+    margin: 30px auto;
+    border: 1px solid #efefef;
+    border-radius: 3px;
+    background: #FFFFFF;
+    padding: 25px 18px;
+    /*box-shadow: 0 0 1px #EAEDEE;*/
+}
+
+#upload-form{
+    text-align: center;
+}
+
+#button-file{
+    text-align: center;
+    border-radius: 3px;
+}
+#input-file{
+    display: none;
+}
+
+#input-caption{
+    display: block;
+    width: 95%;
+    margin: 10px auto 20px;
+    font-size: 13px;
+    padding: 5px 15px;
+    border: none;
+    border-bottom: solid 2px #F3F5F6;
+    transition: border 0.3s;
+    color: #6f85a0;
+    text-align: center;
+}
+
+#input-caption:focus{
+    border-bottom: solid 2px #6496c8;
+}
+
+
+/* -------------------------------------------- */
+/*                     PHOTOS                   */
+/* -------------------------------------------- */
+#photo-section{
+    width: 95%;
+    margin: 0 auto;
+}
+
+.photo-item{
+    position: relative;
+    margin-bottom: 50px;
+    border: 1px solid #eeeeee;
+    background: #FFFFFF;
+    /*box-shadow: 0 0 1px #EAEDEE;*/
+    box-shadow: #e9ebec 0 2px 2px;
+}
+
+.photo-wrap{
+    position: relative;
+    display: block;
+    width: 100%;
+}
+
+.photo-wrap:hover > div.meta{
+    visibility: visible;
+    opacity: 1;
+    transition: opacity 1s linear;
+    overflow: hidden;
+}
+
+div.meta{
+    /*visibility: hidden;*/
+    opacity: 0;
+    transition: opacity 1s linear;
+    position: absolute;
+    right: 0;
+    top: 0;
+    padding: 12px;
+    color: #FFFFFF;
+    z-index: 10;
+    background: rgba(0, 0, 0, 0.5);
+    width: 100%;
+
+}
+div.meta > a, span{
+    font-size: 13px;
+}
+
+span.date{
+    float: left;
+}
+a.delete{
+    float: right;
+    text-decoration: none;
+    color: #FFFFFF;
+}
+a.delete:hover{
+    text-decoration: underline;
+}
+
+.photo{ /* img */
+    display: block;
+    max-width: 100%;
+    /*max-height: 50%;*/
+    margin: 0 auto;
+    /*height: auto;*/
+    /*width: auto;*/
+    overflow: hidden;
+}
+/*.photo:before{
+    content: '';
+    display: block;
+    padding-bottom: 50%;
+
+}*/
+
+.caption{
+    padding: 15px 10px;
+}
+
+.caption span{
+    display: inline-block;
+    width: 100%;
+    font-size: 12px;
+    color: #6f85a0;
+    text-align: center;
+}
+
+@media screen and (min-width: 1600px){ /* Laptop */
+
+    #wrapper{
+        width: 60%;
+        /*border: 2px solid #000000;*/
+
+    }
+
+    #upload-section{
+        width: 60%;
+        padding: 25px 18px;
+    }
+
+    #input-caption{
+        width: 85%;
+    }
+
+    #photo-section{
+        width: 60%;
+    }
+
+}
+
+@media screen and (min-width: 1024px ) and (max-width: 1600px){ /* Tablet / mini-laptop */
+
+    #wrapper{
+        width: 70%;
+        /*border: 2px solid #6f85a0;*/
+    }
+
+    #upload-section{
+        width: 62%;
+        padding: 25px 18px;
+    }
+
+    #input-caption{
+        width: 80%;
+    }
+
+    #photo-section{
+        width: 62%;
+    }
+
+
+}
+
+@media screen and (min-width: 600px ){ /* Tablet / mini-laptop */
+
+}
+
